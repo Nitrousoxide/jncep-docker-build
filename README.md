@@ -8,6 +8,7 @@ use dockercompose to deploy.
 Setup cron jobs like these to have it auto-check the jnc servers for updates each hour. Change the part after "docker exec" from "jncep" to whatever you might have named the container, if you altered it.
 
 #run jnc pre-pub update script every hour
+
 1 */1 * * * docker exec jncep bash /config/jncep/jnc-update.sh
 
 
