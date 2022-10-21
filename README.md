@@ -9,7 +9,7 @@ Setup cron jobs like these to have it auto-check the jnc servers for updates eac
 
 #run jnc pre-pub update script every hour
 
-1 */1 * * * docker exec jncep bash /config/jncep/jnc-update.sh
+1 */1 * * * docker exec jncep bash /scripts/jncep/jnc-update.sh
 
 
 
