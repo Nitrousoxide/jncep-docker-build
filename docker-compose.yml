@@ -10,5 +10,6 @@ services:
       - JNCEP_OUTPUT=/Pre-pubs  #leave this be, this is where the files will be output inside of the container, use the vol attach below to define where this attaches to on your host
       - JNCEP_BYVOLUME=1  #sets it to always spit out completed volumes rather than just new parts.
     volumes:
-      - /home/User1/apps/jncep container/tracker:/root/.jncep/:Z #this is where the followed file will be stored once the app makes it.  attach it to somewhere on the host to keep it persistant between image builds
+      - /home/User1/apps/jncep container/tracker:    volumes:
+      - /home/User1/apps/jncep container/tracker:/config:Z #this is where the followed file will be stored once the app makes it.  attach it to somewhere on the host to keep it persistant between image builds:Z #this is where the followed file will be stored once the app makes it.  attach it to somewhere on the host to keep it persistant between image builds
       - /home/User1/apps/jncep container/exports:/Pre-pubs:Z #where you want the completed pre-pubs to be dropped on your home system.
